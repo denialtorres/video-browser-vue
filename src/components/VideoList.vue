@@ -1,15 +1,21 @@
 <template>
   <ul>
-    Video List
-    {{
-      videos.length
-    }}
+    <VideoListItem
+      v-for="video in videos"
+      :key="video"
+      :video="video"
+    ></VideoListItem>
   </ul>
 </template>
 
 <script>
+import VideoListItem from "./VideoListItem";
+
 export default {
   name: "VideoList",
+  components: {
+    VideoListItem,
+  },
   props: {
     videos: Array,
   },
