@@ -2,7 +2,7 @@
   <ul>
     <VideoListItem
       v-for="video in videos"
-      :key="video"
+      :key="video.etag"
       :video="video"
     ></VideoListItem>
   </ul>
