@@ -18,7 +18,8 @@ export default {
   },
   method: {
     onVideoSelect() {
-      // logic for handle the event click
+      // this.video is the prop passed by the parent
+      this.$emit("videoSelect", this.video);
     },
   },
 };
