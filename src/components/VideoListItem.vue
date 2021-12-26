@@ -16,9 +16,8 @@ export default {
       return this.video.snippet.thumbnails.default.url;
     },
   },
-  method: {
-    onVideoSelect() {
-      // this.video is the prop passed by the parent
+  methods: {
+    onVideoSelect: function () {
       this.$emit("videoSelect", this.video);
     },
   },

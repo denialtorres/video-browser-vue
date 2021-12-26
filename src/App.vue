@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @termChange="onTermChange"></SearchBar>
-    <VideoList :videos="videos"></VideoList>
+    <VideoList :videos="videos" @videoSelect="onVideoSelect"></VideoList>
   </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
     };
   },
   methods: {
+    onVideoSelect(video) {
+      console.log(video);
+    },
     onTermChange(searchTerm) {
       youtube
         .get("/search", {
